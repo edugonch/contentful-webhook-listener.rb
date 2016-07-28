@@ -12,6 +12,7 @@ module Contentful
         def initialize(request)
           @headers = {}
           request.each { |header, value| @headers[header.downcase] = value }
+          puts "request #{request}"
           @body = JSON.load(request.body)
         end
 
