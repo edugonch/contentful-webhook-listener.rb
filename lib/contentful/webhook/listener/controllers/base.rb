@@ -18,9 +18,9 @@ module Contentful
             response.body = ''
             response.status = 200
             
-            Thread.new do
-                puts "request #{request}"
-                perform(request, response)
+            Thread.new(request, response) do |rq, rs|
+                puts "request #{rq}"
+                perform(rq, rs)
                 "ok"
             end
             "ok"
