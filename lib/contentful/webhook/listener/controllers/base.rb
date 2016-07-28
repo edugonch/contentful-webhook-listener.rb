@@ -21,6 +21,7 @@ module Contentful
             Thread.new do
                 perform(request, response)
             end
+            "ok"
           end
 
           alias_method :do_GET, :respond
