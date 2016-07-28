@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["david.litvak@contentful.com"]
   spec.summary       = %q{A Simple HTTP Webserver with pluggable behavior for listening to Contentful API Webhooks}
   spec.description   = %q{A Simple HTTP Webserver with pluggable behavior for listening to Contentful API Webhooks}
-  spec.homepage      = "https://github.com/contentful/contentful-webhook-listener.rb"
+  spec.homepage      = "http://github.com/edugonch/contentful-webhook-listener.r"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
