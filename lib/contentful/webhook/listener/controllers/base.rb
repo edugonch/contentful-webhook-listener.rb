@@ -20,6 +20,7 @@ module Contentful
 
             Thread.new do
                 perform(request, response)
+                "ok"
             end
             "ok"
           end
