@@ -36,10 +36,10 @@ module Contentful
 
           def perform(request, response)
             begin
-              logger.debug "request #{request}"
+              puts "request #{request}"
               @webhook = WebhookFactory.new(request).create
             rescue Exception => e
-              logger.error e
+              puts e
               response.body = "Not a Webhook"
               response.status = 400
               return
@@ -47,7 +47,7 @@ module Contentful
 
             #super(request, response)
 
-            logger.debug "Webhook Data: {id: #{webhook.id}, space_id: #{webhook.space_id}, kind: #{webhook.kind}, event: #{webhook.event}}"
+            puts "Webhook Data: {id: #{webhook.id}, space_id: #{webhook.space_id}, kind: #{webhook.kind}, event: #{webhook.event}}"
             send(webhook.event)
             
             "ok"
