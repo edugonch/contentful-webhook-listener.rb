@@ -36,8 +36,8 @@ module Contentful
 
           def perform(request, response)
             begin
-              puts "request #{response}"
-              #@webhook = WebhookFactory.new(request).create
+              puts "request #{request}"
+              @webhook = WebhookFactory.new(request).create
             rescue Exception => e
               puts e
               response.body = "Not a Webhook"
