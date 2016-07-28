@@ -44,7 +44,7 @@ module Contentful
               return
             end
 
-            super(request, response)
+            #super(request, response)
 
             logger.debug "Webhook Data: {id: #{webhook.id}, space_id: #{webhook.space_id}, kind: #{webhook.kind}, event: #{webhook.event}}"
             send(webhook.event)
