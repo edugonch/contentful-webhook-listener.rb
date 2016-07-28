@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## v0.2.4
+
 ## v0.2.1
 ### Fixed
 * Fixes Headers for case-insensitive retrieval
