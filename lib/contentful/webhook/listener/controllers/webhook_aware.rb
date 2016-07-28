@@ -36,7 +36,6 @@ module Contentful
 
           def perform(request, response)
             begin
-              puts "request #{request}"
               @webhook = WebhookFactory.new(request).create
             rescue Exception => e
               puts e
