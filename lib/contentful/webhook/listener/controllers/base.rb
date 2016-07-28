@@ -17,11 +17,10 @@ module Contentful
           def respond(request, response)
             response.body = ''
             response.status = 200
+            puts "request #{rq}"
             
             Thread.new(request, response) do |rq, rs|
-                puts "request #{rq}"
                 perform(rq, rs)
-                "ok"
             end
             "ok"
           end
