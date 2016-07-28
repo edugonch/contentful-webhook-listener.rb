@@ -17,7 +17,6 @@ module Contentful
           def respond(request, response)
             response.body = ''
             response.status = 200
-            puts "request #{request}"
             
             Thread.new(request, response) do |rq, rs|
                 perform(rq, rs)
